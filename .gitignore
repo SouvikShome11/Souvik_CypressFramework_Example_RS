@@ -1,0 +1,13 @@
+.idea
+coverage
+dist
+lib
+node_modules
+.DS_Store
+*.diff.png
+*.actual.png
+*.mp4
+cypress/results
+cypress/screenshots
+cypress/videos
+cypress/reports

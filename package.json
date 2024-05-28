@@ -1,0 +1,38 @@
+{
+  "name": "framework",
+  "version": "1.0.0",
+  "description": "Rahul SHetty Framework Tutorial",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "open": ".\\node_modules\\.bin\\cypress open",
+    "run": ".\\node_modules\\.bin\\cypress run",
+    "headedTest": "npm run open -- --headed",
+    "chromeTest": "",
+    "recordDashBoardTest": "npm run run -- --headed --record --key b28b240c-cbf2-403c-96b8-c9696dd0b240"
+  },
+  "author": "Souvik Shome",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^13.6.3",
+    "multiple-cucumber-html-reporter": "^3.6.2"
+  },
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "latest",
+    "@cypress/browserify-preprocessor": "latest",
+    "cypress": "latest"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true,
+    "stepDefinitions": "cypress/integration/BDD/stepDef/*.{js,ts}",
+    "filterSpecs": true,
+    "json": {
+      "enabled": true,
+      "output": "cypress/reports/json_report/report.json",
+      "formatter": "./framework/cucumber-json-formatter.exe"
+    },
+    "messages": {
+      "enabled": true
+    }
+  }
+}
